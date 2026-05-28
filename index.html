@@ -12,11 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: #2c3e50;
+            background: #f8f9fa;
         }
 
         .container {
@@ -27,159 +26,178 @@
 
         header {
             text-align: center;
-            color: white;
             margin-bottom: 60px;
-            padding: 40px 0;
+            padding: 60px 0;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #667eea;
+            font-weight: 700;
         }
 
         .tagline {
-            font-size: 1.3em;
-            opacity: 0.95;
+            font-size: 1.2em;
+            color: #666;
             margin-bottom: 20px;
+            font-weight: 500;
         }
 
         .description {
-            font-size: 1.1em;
+            font-size: 1em;
             max-width: 600px;
             margin: 0 auto;
-            opacity: 0.9;
+            color: #555;
             line-height: 1.8;
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin: 60px 0;
         }
 
         .feature-card {
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #667eea;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.2s;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border-left-width: 6px;
+            background: #f9fafb;
         }
 
         .feature-card h3 {
             color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
         }
 
         .feature-card p {
             color: #666;
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95em;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 50px;
+            background: #667eea;
+            color: white;
+            padding: 14px 32px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.2s;
             margin-top: 30px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #5568d3;
         }
 
         footer {
             text-align: center;
-            color: white;
+            color: #666;
             margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            opacity: 0.9;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         .emoji {
-            font-size: 1.2em;
             margin-right: 8px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            margin: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             
             .tagline {
-                font-size: 1.1em;
+                font-size: 1em;
             }
             
             .features {
                 grid-template-columns: 1fr;
             }
+
+            header {
+                padding: 40px 0;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>🎵 Aleora</h1>
+        <p class="tagline">Музичний бот для Telegram</p>
+        <p class="description">
+            Aleora — бот для музичних продюсерів та артистів, який надає доступ до випадкових звукових зразків з безплатних онлайн-джерел. Знайдіть нові звуки, текстури, луписи та натхнення для своїх музичних творів.
+        </p>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>🎵 Aleora</h1>
-            <p class="tagline">Your Music Inspiration Bot for Telegram</p>
-            <p class="description">
-                Aleora is a music bot on Telegram aimed at music producers and artists 
-                who provide access to randomized audio samples extracted from free sources. 
-                Find new sounds, textures, loops, and inspiration for your music creations 
-                quickly and conveniently.
-            </p>
-        </header>
-
-        <main>
-            <section class="features">
-                <div class="feature-card">
-                    <h3><span class="emoji">🎼</span>Random Samples</h3>
-                    <p>Access a vast collection of randomized audio samples from free online sources, tailored for music producers.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3><span class="emoji">🎛️</span>Quick Discovery</h3>
-                    <p>Find new sounds, textures, loops, and creative inspiration in seconds directly from Telegram.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3><span class="emoji">🚀</span>Easy to Use</h3>
-                    <p>Simple and intuitive interface designed specifically for artists and music creators.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3><span class="emoji">🎧</span>Instant Access</h3>
-                    <p>Get audio samples and samples instantly without leaving your Telegram conversation.</p>
-                </div>
-            </section>
-
-            <div style="text-align: center;">
-                <a href="https://t.me/aleora_bot" class="cta-button">
-                    Start with Aleora on Telegram
-                </a>
+        <section class="features">
+            <div class="feature-card">
+                <h3><span class="emoji">🎼</span>Випадкові зразки</h3>
+                <p>Доступ до великої колекції звукових зразків з безплатних онлайн-джерел для музичних продюсерів.</p>
             </div>
-        </main>
 
-        <footer>
-            <p>&copy; 2026 Aleora. Made for music creators.<br>
-            <a href="https://github.com/polskidatacenter/Aleora" style="color: white; text-decoration: underline;">GitHub Repository</a></p>
-        </footer>
+            <div class="feature-card">
+                <h3><span class="emoji">⚡</span>Швидке відкриття</h3>
+                <p>Знайдіть нові звуки, текстури, луписи та натхнення за секунди прямо з Telegram.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="emoji">🎧</span>Простота у використанні</h3>
+                <p>Інтуїтивний інтерфейс, спеціально розроблений для артистів та музичних творців.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="emoji">💾</span>Миттєвий доступ</h3>
+                <p>Отримайте звукові зразки миттєво, не покидаючи розмову в Telegram.</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <a href="https://t.me/aleora_bot" class="cta-button">
+                Почати з Aleora в Telegram
+            </a>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Aleora. Для музичних творців.<br>
+        <a href="https://github.com/polskidatacenter/Aleora">GitHub репозиторій</a></p>
+    </footer>
 </body>
 </html>
